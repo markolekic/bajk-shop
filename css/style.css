@@ -1,0 +1,27 @@
+/*Setup SCSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  list-style-type: none; }
+
+header {
+  background-color: #353738; }
+
+#hero {
+  background-color: #848789; }
+
+#text-block {
+  background-color: #282F35;
+  color: #FFF; }
+
+#tiles {
+  background-color: #FFF; }
+
+#slider {
+  background-color: #64C29E; }
+
+#shop {
+  background-color: #F7F7F7; }
