@@ -18,6 +18,11 @@
         text-align: justify;
         padding-bottom: 15px;
     }
+
+    .small-icon,
+    .grey-line {
+        all: inherit;
+    }
 }
 
 .text-box {
@@ -36,6 +41,12 @@
     border-style: solid;
     border-width: 15px 15px 0 15px;
     border-color: $white transparent transparent transparent;
+}
+
+.row {
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    display: grid;
 }
 
 .large-img {
@@ -60,7 +71,7 @@
     top: 40%;
 }
 
-.parent-3 .large-img::after {
+.row .row--middle .large-img::after {
     content: url("../img/Logo@1X (4).png") !important;
     position: absolute;
     text-align: center;
@@ -68,227 +79,196 @@
     right: 0;
 }
 
-.parent-1 {
-    display: grid;
+.column {
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.row--top {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
 
-    .div1 {
+    .column:nth-child(1) {
         grid-area: 1 / 1 / 4 / 3;
-        width: 100%;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
     }
 
-    .div2 {
+    .column:nth-child(2) {
         grid-area: 1 / 3 / 3 / 4;
         width: 100%;
     }
 
-    .div3 {
+    .column:nth-child(3) {
         grid-area: 3 / 3 / 4 / 4;
         width: 100%;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
     }
 }
 
-.parent-2 {
-    display: grid;
+.row--middle {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
 
-    .div1 {
+    .column:nth-child(1) {
         grid-area: 1 / 1 / 3 / 2;
-        width: 100%;
     }
 
-    .div2 {
+    .column:nth-child(2) {
         grid-area: 3 / 1 / 4 / 2;
-        width: 100%;
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
     }
 
-    .div3 {
+    .column:nth-child(3) {
         grid-area: 1 / 2 / 4 / 4;
-        width: 100%;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
     }
 }
 
 
-.parent-3 {
-    display: grid;
+.row--buttom {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
 
-    .div1 {
+    .column:nth-child(1) {
         grid-area: 1 / 1 / 4 / 2;
-        width: 100%;
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
     }
 
-    .div2 {
+    .column:nth-child(2) {
         grid-area: 1 / 2 / 3 / 3;
-        width: 100%;
     }
 
-    .div3 {
+    .column:nth-child(3) {
         grid-area: 3 / 2 / 4 / 3;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
     }
 
-    .div4 {
+    .column:nth-child(4) {
         grid-area: 1 / 3 / 4 / 4;
 
-        img {
-            width: 100%;
-            height: 100%;
-        }
     }
 }
 
 /*** Queries ****/
 
 @media (max-width: 1200px) {
-    .parent-1 {
+    .row--top {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
 
-        .div1 {
+        .column:nth-child(1) {
             grid-area: 1 / 1 / 4 / 2;
         }
 
-        .div2 {
+        .column:nth-child(2) {
             grid-area: 1 / 2 / 3 / 3;
         }
 
-        .div3 {
+        .column:nth-child(3) {
             grid-area: 3 / 2 / 4 / 3;
         }
     }
 
-    .parent-2 {
+    .row--middle {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
 
-        .div1 {
+        .column:nth-child(1) {
             grid-area: 1 / 1 / 3 / 2;
         }
 
-        .div2 {
+        .column:nth-child(2) {
             grid-area: 3 / 1 / 4 / 2;
         }
 
-        .div3 {
+        .column:nth-child(3) {
             grid-area: 1 / 2 / 4 / 3;
         }
     }
 
-    .parent-3 {
+    .row--buttom {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
 
-        .div1 {
+        .column:nth-child(1) {
             grid-area: 1 / 1 / 4 / 2;
         }
 
-        .div2 {
+        .column:nth-child(2) {
             grid-area: 1 / 2 / 3 / 3;
         }
 
-        .div3 {
+        .column:nth-child(3) {
             grid-area: 3 / 2 / 4 / 3;
         }
 
-        .div4 {
+        .column:nth-child(4) {
             display: none;
         }
     }
 }
 
 @media(max-width:768px) {
-    .parent-1 {
+    .row--top {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(1, 1fr);
 
-        .div1 {
+        .column:nth-child(1) {
             grid-area: 1 / 1 / 2 / 4;
         }
 
-        .div2 {
+        .column:nth-child(2) {
             grid-area: 2 / 1 / 3 / 4;
         }
 
-        .div3 {
+        .column:nth-child(3) {
             display: none;
         }
     }
 
-    .parent-2 {
+    .row--middle {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(1, 1fr);
 
-        .div1 {
+        .column:nth-child(1) {
             grid-area: 2 / 1 / 3 / 4;
         }
 
-        .div2 {
+        .column:nth-child(2) {
             display: none;
         }
 
-        .div3 {
+        .column:nth-child(3) {
             grid-area: 1 / 1 / 2 / 4;
         }
     }
 
-    .parent-3 {
+    .row--buttom {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(1, 1fr);
 
-        .div1 {
+        .column:nth-child(1) {
             grid-area: 1 / 1 / 2 / 4;
+            padding-top: 57%;
+
+            /**ascpect**/
+            /* fixing height problems */
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                text-align: center;
+            }
         }
 
-        .div2 {
+        .column:nth-child(2) {
             grid-area: 2 / 1 / 3 / 4;
         }
 
-        .div3 {
+        .column:nth-child(3) {
             display: none;
         }
     }
