@@ -2,9 +2,9 @@
     background-color: $light-grey;
 
     .text-container {
-        padding: 5rem 0 5rem;
+        padding: 50px 0 50px;
         margin: 0 auto;
-        width: 70%;
+        width: $max-width;
         text-align: center;
 
         img {
@@ -22,5 +22,12 @@
             color: $grey;
             line-height: 1.7;
         }
+    }
+}
+
+@media(max-width: 1200px) {
+    #text-block .text-container {
+        width: 100%;
+        padding: 50px 20px 50px 20px;
     }
 }
