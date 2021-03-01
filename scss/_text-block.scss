@@ -1,4 +1,26 @@
 #text-block {
-    background-color: $light-black;
-    color: $white;
+    background-color: $light-grey;
+
+    .text-container {
+        padding: 5rem 0 5rem;
+        margin: 0 auto;
+        width: 70%;
+        text-align: center;
+
+        img {
+            padding-bottom: 25px;
+        }
+
+        h1 {
+            color: $dark-grey;
+            text-transform: uppercase;
+            padding-bottom: 25px;
+            font-size: 18px;
+        }
+
+        p {
+            color: $grey;
+            line-height: 1.7;
+        }
+    }
 }
