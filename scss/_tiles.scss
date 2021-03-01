@@ -1,6 +1,4 @@
-// Mixins
-@import 'mixins';
-/*****************/
+//Tiles section
 
 .text-container-grid {
     margin: 0 auto;
@@ -14,6 +12,7 @@
         padding-bottom: 15px;
         padding-top: 15px;
         font-size: 18px;
+        letter-spacing: 1px;
     }
 
     p {
@@ -86,6 +85,13 @@
 
         @include breakpoint(smallDevice) {
             grid-area: 1 / 1 / 2 / 4;
+            padding-top: 57%;
+
+            /**ascpect**/
+            /* fixing height problems */
+            img {
+                @include aspect-correction;
+            }
         }
     }
 
@@ -149,6 +155,13 @@
 
         @include breakpoint(smallDevice) {
             grid-area: 1 / 1 / 2 / 4;
+            padding-top: 57%;
+
+            /**ascpect**/
+            /* fixing height problems */
+            img {
+                @include aspect-correction;
+            }
         }
     }
 }
@@ -169,12 +182,7 @@
             /**ascpect**/
             /* fixing height problems */
             img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                text-align: center;
+                @include aspect-correction;
             }
         }
     }
@@ -220,26 +228,17 @@
 
 .large-img:first-child::after {
     content: url("../img/Logo@1X (5).png");
-    position: absolute;
-    text-align: center;
-    left: 0;
-    right: 0;
+    @include pseudo-position;
     top: 43%;
 }
 
 .large-img:last-child::after {
     content: url("../img/Logo@1X (6).png");
-    position: absolute;
-    text-align: center;
-    left: 0;
-    right: 0;
+    @include pseudo-position;
     top: 40%;
 }
 
 .row.row--middle .large-img::after {
     content: url("../img/Logo@1X (4).png");
-    position: absolute;
-    text-align: center;
-    left: 0;
-    right: 0;
+    @include pseudo-position;
 }

@@ -1,4 +1,9 @@
-/*Setup SCSS*/
+// Mixins
+@import 'mixins';
+/*****************/
+@import 'helpers';
+
+/****Setup SCSS****/
 
 //Variables
 $font-family: 'Lato',
