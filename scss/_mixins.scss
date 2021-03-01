@@ -1,0 +1,15 @@
+//Breakpoints
+
+@mixin breakpoint($point) {
+    @if $point==smallDevice {
+        @media screen and (max-width:768px) {
+            @content;
+        }
+    }
+
+    @else if $point==desktop {
+        @media screen and (max-width: 1200px) {
+            @content;
+        }
+    }
+}
