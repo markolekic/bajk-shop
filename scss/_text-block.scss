@@ -2,7 +2,7 @@
     background-color: $light-grey;
 
     .text-container {
-        padding: 50px 0 50px;
+        padding: 70px 0 70px;
         margin: 0 auto;
         width: $max-width;
         text-align: center;
@@ -16,6 +16,7 @@
             text-transform: uppercase;
             padding-bottom: 25px;
             font-size: 18px;
+            letter-spacing: 1px;
         }
 
         p {
