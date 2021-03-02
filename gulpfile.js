@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
+const autoprefixer = require('gulp-autoprefixer');
 
 //compile scss into css
 
@@ -9,9 +10,13 @@ function style() {
     return gulp.src('./scss/**/*.scss')
     // 2.pass that files through sass compiler
     .pipe(sass())
-    // 3.where do i save de compiled CSS
+    // 3. add autoprefixer
+    .pipe(autoprefixer({
+        cascade: false
+    }))
+    // 4.where do i save de compiled CSS
     .pipe(gulp.dest('./css'))
-    //4. stream changes to all browser
+    // 5.stream changes to all browser
     .pipe(browserSync.stream())
 }
 
