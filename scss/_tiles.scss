@@ -228,17 +228,15 @@
 
 .large-img:first-child::after {
     content: url("../img/Logo@1X (5).png");
-    @include pseudo-position;
-    top: 43%;
+    @extend %pseudo-position;
 }
 
 .large-img:last-child::after {
     content: url("../img/Logo@1X (6).png");
-    @include pseudo-position;
-    top: 40%;
+    @extend %pseudo-position;
 }
 
 .row.row--middle .large-img::after {
     content: url("../img/Logo@1X (4).png");
-    @include pseudo-position;
+    @extend %pseudo-position;
 }
