@@ -6,3 +6,12 @@ navbarToggler.addEventListener("click", () => {
     navbarToggler.classList.toggle("open-navbar-toggler");
     navbarMenu.classList.toggle("active");
 });
+
+
+//Init swiper
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+      },
+    });

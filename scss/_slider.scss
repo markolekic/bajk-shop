@@ -1,3 +1,59 @@
-#slider {
-    background-color: $turquoise;
+#slider-section {
+    background-color: $light-grey;
+    padding: 80px 0 80px;
+    text-align: center;
+
+    .swiper-container {
+        width: $max-width;
+        max-width: 100%;
+        position: relative;
+
+        .swiper-slide {
+            font-size: 18px;
+
+            /* Center slide text vertically */
+
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+
+            p {
+                padding: 30px 25px 100px;
+                font-style: italic;
+                color: $grey;
+            }
+
+            .fab {
+                color: #56C7EE;
+                padding-bottom: 23px;
+            }
+
+            strong {
+                letter-spacing: 2px;
+            }
+
+            i {
+                color: $grey;
+            }
+
+            span {
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+//Pignation styling
+.swiper-pagination {
+    margin: 0 auto;
+    position: relative;
+
+    span {
+        background-color: $grey;
+    }
 }
