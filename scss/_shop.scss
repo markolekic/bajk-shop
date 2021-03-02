@@ -1,3 +1,161 @@
-#shop {
-    background-color: $light-grey;
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    @include breakpoint(desktop) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    @include breakpoint(smallDevice) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .column:nth-child(1) {
+        grid-area: 1 / 1 / 2 / 2;
+
+        @include breakpoint(desktop) {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        @include breakpoint(smallDevice) {
+            display: none;
+        }
+    }
+
+    .column:nth-child(2) {
+        grid-area: 1 / 2 / 2 / 3;
+
+        @include breakpoint(desktop) {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        @include breakpoint(smallDevice) {
+            display: none;
+        }
+    }
+
+    .column:nth-child(3) {
+        grid-area: 1 / 3 / 3 / 4;
+
+        @include breakpoint(desktop) {
+            grid-area: 1 / 3 / 3 / 4;
+        }
+
+        @include breakpoint(smallDevice) {
+            display: none;
+        }
+    }
+
+    .column:nth-child(4) {
+        grid-area: 1 / 4 / 3 / 5;
+
+        @include breakpoint(desktop) {
+            grid-area: 3 / 1 / 5 / 2;
+        }
+
+        @include breakpoint(smallDevice) {
+            display: none;
+        }
+    }
+
+    .column:nth-child(5) {
+        grid-area: 1 / 5 / 2 / 7;
+        position: relative;
+
+        @include breakpoint(desktop) {
+            grid-area: 3 / 2 / 4 / 4;
+        }
+
+        @include breakpoint(smallDevice) {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+    }
+
+    //adder background
+    .column:nth-child(5):before {
+        @extend %pseudo-bg-image;
+        background: $turquoise;
+        opacity: .7;
+        z-index: 25;
+    }
+
+    //added icon
+    .column:nth-child(5)::after {
+        content: url("../img/Shape 13@1X.png");
+        z-index: 99;
+        @extend %pseudo-position;
+    }
+
+    .column:nth-child(6) {
+        grid-area: 2 / 1 / 3 / 3;
+
+        @include breakpoint(desktop) {
+            grid-area: 2 / 1 / 3 / 3;
+        }
+
+        @include breakpoint(smallDevice) {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+    }
+
+    .column:nth-child(7) {
+        grid-area: 2 / 5 / 3 / 6;
+
+        @include breakpoint(desktop) {
+            grid-area: 4 / 2 / 5 / 3;
+        }
+
+        @include breakpoint(smallDevice) {
+            display: none;
+        }
+    }
+
+    .column:nth-child(8) {
+        grid-area: 2 / 6 / 3 / 7;
+
+        @include breakpoint(desktop) {
+            grid-area: 4 / 3 / 5 / 4;
+        }
+
+        @include breakpoint(smallDevice) {
+            display: none;
+        }
+    }
+}
+
+//black container with white button
+.discover {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background-color: $light-black;
+    height: 20vh;
+    text-align: center;
+    
+    //white-btn
+    a {
+        margin: 0 auto;
+        color: $white;
+        border: 1px solid $white;
+        padding: 10px 20px 10px 20px;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        transition: .2s ease-in-out;
+    }
+
+    a:hover {
+        color: $light-black;
+        border: 1px solid $light-black;
+        background-color: $white;
+    }
 }
