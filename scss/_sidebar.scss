@@ -1,0 +1,120 @@
+#main-content {
+    background-color: $light-grey;
+
+    .home-about-text {
+        width: $container-width;
+        padding: 25px 0;
+        font-weight: 600;
+        margin: 0 auto;
+
+        span:nth-child(1) {
+            color: $turquoise;
+        }
+
+        span:nth-child(2) {
+            color: $grey;
+        }
+    }
+
+    .container-main-text {
+        width: $container-width;
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .text-accordian-wrapper {
+            width: 28%;
+        }
+
+        .side-box {
+            display: flex;
+            flex-direction: column;
+            background-color: $white;
+        }
+
+        .side-box::after {
+            content: none;
+        }
+    }
+
+    //plain text section 
+    .plain-text-div {
+        width: 70%;
+        color: $grey;
+        max-width: 100%;
+
+        h1{
+            text-transform: uppercase;
+        }
+
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+//accordian
+
+#accordian-section {
+    background-color: $white;
+    margin-top: 20px;
+
+    p {
+        color: $grey;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+}
+
+.accordian-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-acc {
+    max-width: 600px;
+}
+
+button.accordion {
+    text-transform: uppercase;
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: $turquoise;
+    cursor: pointer;
+}
+
+button.accordion:after {
+    content: "\f067";
+    font-weight: 300;
+    font-family: "fontawesome";
+    font-size: 20px;
+    float: right;
+}
+
+
+button.accordion.is-open:after {
+    content: "\f068";
+}
+
+.accordion-content {
+    border-bottom: $turquoise 1px solid;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+    .accordian-container {
+        flex-direction: column;
+        padding-top: 40px;
+    }
+}

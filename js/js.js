@@ -23,9 +23,9 @@ window.addEventListener("scroll", () => {
 });
 
 //Init swiper
-var swiper = new Swiper('.swiper-container', {
-  pagination: {
-    el: '.swiper-pagination',
-    dynamicBullets: true,
-  },
-});
+// var swiper = new Swiper('.swiper-container', {
+//   pagination: {
+//     el: '.swiper-pagination',
+//     dynamicBullets: true,
+//   },
+// });
