@@ -1,5 +1,5 @@
 const navbar = document.querySelector(".navbar");
-const textBlock = document.querySelector('#text-block')
+const hero = document.querySelector('#hero')
 const navbarToggler = document.querySelector(".navbar-toggler");
 const navbarMenu = document.querySelector(".navbar ul");
 
@@ -11,13 +11,14 @@ navbarToggler.addEventListener("click", () => {
 
 //Onscroll color change
 window.addEventListener("scroll", () => {
-  if (window.scrollY > textBlock.offsetTop) {
-    navbar.style.backgroundColor = 'white'
+  if (window.scrollY > hero.offsetTop + hero.offsetHeight) {
+    navbar.classList.add('white')
+    navbar.classList.remove('transparent')
   } else {
-    navbar.style.backgroundColor = 'transparent'
+    navbar.classList.add('transparent')
+    navbar.classList.remove('white')
   }
 });
-
 
 //Init swiper
 var swiper = new Swiper('.swiper-container', {
