@@ -11,21 +11,15 @@ navbarToggler.addEventListener("click", () => {
 
 //Onscroll color change
 window.addEventListener("scroll", () => {
-  //setting offset to 0
-  let offset = 0;
-  //if hero class contains transparent class
-  if (hero.classList.contains('js-transparent-header')) {
-    //count hero buttom edge 
-    offset = hero.offsetTop + hero.offsetHeight;
-    console.log(offset);
-  }
+  //finding offset
+  let offset = hero.offsetTop + hero.offsetHeight;
   //on scroll add white color
   if (window.scrollY > offset) {
-    navbar.classList.add('js-white-header');
+    navbar.classList.add('white-header');
     return;
   }
   //else
-  navbar.classList.remove('js-white-header');
+  navbar.classList.remove('white-header');
 });
 
 //Init swiper
