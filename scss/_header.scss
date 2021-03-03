@@ -12,6 +12,15 @@
 }
 
 //Dynamic class
+
+.navbar.white {
+    background-color: $white;
+}
+
+.navbar.transperent {
+    background-color: transparent;
+}
+
 .navbar ul.active {
     display: flex;
 }
