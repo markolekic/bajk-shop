@@ -1,8 +1,37 @@
-#hero {
+.index-hero {
     background-image: url("/img/Layer 7@1X.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+
+    @include breakpoint(largeDevice) {
+        height: 75vh;
+        background-position: bottom;
+    }
+
+    @include breakpoint(smallDevice) {
+        height: 50vh;
+    }
+}
+
+.about-hero {
+    background-image: url("/img/Layer 27@1X.png");
+    background-repeat: no-repeat;
+    background-position: center 8%;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+
+    h1 {
+        position: absolute;
+        width: 100%;
+        bottom: 20%;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 50px;
+        font-weight: 400;
+        color: $white;
+        letter-spacing: 2px;
+    }
 }

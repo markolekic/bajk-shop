@@ -1,5 +1,5 @@
 const navbar = document.querySelector(".navbar");
-const hero = document.querySelector('#hero')
+const hero = document.querySelector('.hero')
 const navbarToggler = document.querySelector(".navbar-toggler");
 const navbarMenu = document.querySelector(".navbar ul");
 
