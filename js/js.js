@@ -1,7 +1,7 @@
 const navbar = document.querySelector(".navbar");
-const hero = document.querySelector('.hero')
 const navbarToggler = document.querySelector(".navbar-toggler");
 const navbarMenu = document.querySelector(".navbar ul");
+const hero = document.querySelector('.hero')
 
 //Navbar toggle
 navbarToggler.addEventListener("click", () => {
@@ -11,13 +11,21 @@ navbarToggler.addEventListener("click", () => {
 
 //Onscroll color change
 window.addEventListener("scroll", () => {
-  if (window.scrollY > hero.offsetTop + hero.offsetHeight) {
-    navbar.classList.add('js-white-header')
-    navbar.classList.remove('js-transparent-header')
-  } else {
-    navbar.classList.add('js-transparent-header')
-    navbar.classList.remove('js-white-header')
+  //setting offset to 0
+  let offset = 0;
+  //if hero class contains transparent class
+  if (hero.classList.contains('js-transparent-header')) {
+    //count hero buttom edge 
+    offset = hero.offsetTop + hero.offsetHeight;
+    console.log(offset);
   }
+  //on scroll add white color
+  if (window.scrollY > offset) {
+    navbar.classList.add('js-white-header');
+    return;
+  }
+  //else
+  navbar.classList.remove('js-white-header');
 });
 
 //Init swiper
