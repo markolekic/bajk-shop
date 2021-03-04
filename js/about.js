@@ -43,38 +43,3 @@ accordionBtns.forEach((accordion) => {
     }
   })
 });
-
-/*******/
-
-//Init swiper
-// var swiper = new Swiper('.swiper-container', {
-//   pagination: {
-//     el: '.swiper-pagination',
-//     dynamicBullets: true,
-//   },
-// });
-
-//Work swiper 
-
-// Swiper Configuration
-var swiper = new Swiper(".swiper-container", {
-  slidesPerView: 1.3,
-  spaceBetween: 5,
-  centeredSlides: true,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  },
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 0,
-    }
-  }
-  
-});
