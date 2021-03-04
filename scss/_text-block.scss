@@ -2,10 +2,9 @@
     background-color: $light-grey;
 
     .text-container {
+        @extend %container-centered;
         padding: 70px 0 70px;
-        margin: 0 auto;
         width: $container-width;
-        max-width: 100%;
         text-align: center;
 
         img {
