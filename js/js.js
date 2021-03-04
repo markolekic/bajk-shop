@@ -22,8 +22,7 @@ window.addEventListener("scroll", () => {
   navbar.classList.remove('white-header');
 });
 
-//ACCORDIAN
-
+//Accordion
 const accordionBtns = document.querySelectorAll(".accordion");
 
 //go through each accordion button one by one
