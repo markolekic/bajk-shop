@@ -19,10 +19,10 @@
 
         span:nth-child(1) {
             color: $turquoise;
-        }
 
-        span:nth-child(2) {
-            color: $grey;
+            &:last-child {
+                color: $grey;
+            }
         }
     }
 
@@ -36,7 +36,7 @@
             flex-direction: column;
         }
 
-        .text-accordian-wrapper {
+        .text-accordion-wrapper {
             width: 28%;
             max-width: 100%;
 
@@ -82,7 +82,7 @@
     }
 
     //Plain text section 
-    .plain-text-div {
+    .main-article {
         width: 67%;
         color: $grey;
         max-width: 100%;
@@ -119,14 +119,14 @@
             font-style: italic;
         }
 
-        .thin-grey-line {
+        .description-underline {
             border-bottom: 1px solid $grey;
         }
     }
 }
 
-//Accordian
-#accordian-section {
+//accordion
+#accordion-section {
     background-color: $white;
     margin-top: 20px;
 
@@ -146,7 +146,7 @@
     }
 }
 
-.accordian-container {
+.accordion-container {
     display: flex;
     justify-content: center;
     align-items: center;
