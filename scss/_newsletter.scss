@@ -51,19 +51,28 @@
     //Button container
 
     .wrapper-for-btn {
+        max-width: 100%;
 
         button {
             color: $white;
+            background-color: $turquoise;
             font-size: 18px;
-            @extend %flex-align-helper;
             width: 130px;
             max-width: 100%;
             height: 65px;
-            background-color: $turquoise;
             text-transform: uppercase;
-            margin-left: 2px;
             border: none;
             outline: none;
+            @extend %flex-align-helper;
+            margin-left: 2px;
+            cursor: pointer;
+            transition: .2s;
+
+            &:hover {
+                background-color: $white;
+                color: $turquoise;
+                border: 1px solid $grey;
+            }
 
             @include breakpoint(smallDevice) {
                 margin-top: 5px;

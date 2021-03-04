@@ -7,27 +7,6 @@
         line-height: 1.7;
     }
 
-    .home-about-text {
-
-        span {
-            color: $turquoise;
-            cursor: pointer;
-    
-            &:last-child {
-                color: $grey;
-            }
-        }
-
-        @extend %container-centered;
-        width: $container-width;
-        padding: 25px 0;
-        font-weight: 600;
-
-        @include breakpoint(desktop) {
-            padding: 25px 25px;
-        }
-    }
-
     .container-main-text {
         @extend %container-centered;
         width: $container-width;
@@ -193,5 +172,26 @@
         max-height: 0;
         overflow: hidden;
         transition: 0.2s ease-in-out;
+    }
+}
+
+.home-about-text {
+
+    span {
+        color: $turquoise;
+        cursor: pointer;
+
+        &:last-child {
+            color: $grey;
+        }
+    }
+
+    @extend %container-centered;
+    width: $container-width;
+    padding: 25px 0;
+    font-weight: 600;
+
+    @include breakpoint(desktop) {
+        padding: 25px 25px;
     }
 }
