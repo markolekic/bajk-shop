@@ -10,6 +10,10 @@
     left: 0;
     z-index: 999;
     transition: .3s ease-in-out;
+
+    @include breakpoint(smallDevice) {
+        height: 115px;
+    }
 }
 
 //Dynamic class
@@ -25,6 +29,14 @@
 
 .navbar-brand {
     display: none;
+
+    @include breakpoint(mediumDevice) {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
+
 }
 
 .navbar a {
@@ -59,46 +71,7 @@
     line-height: inherit;
     padding: 30px 0 30px;
 
-    li {
-        display: inline-block;
-
-        a {
-            display: block;
-            text-align: center;
-            min-width: 120px;
-            padding: 0 35px;
-            transition: .2s ease-in-out;
-        }
-    }
-}
-
-.navbar ul li a:hover {
-    color: $turquoise;
-}
-
-.navbar .navbar-toggler {
-    display: none;
-}
-
-@media (max-width: 992px) {
-    .navbar ul li a {
-        min-width: 100px;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        height: 115px;
-    }
-
-    .navbar-brand {
-        display: block;
-        position: absolute;
-        top: 10px;
-        left: 0;
-    }
-
-    .navbar ul {
+    @include breakpoint(mediumDevice) {
         width: 100%;
         display: none;
         /* height: auto; */
@@ -109,22 +82,44 @@
         flex-direction: column;
         padding-top: 120px;
 
-        span {
-            display: none;
-        }
-
-        .middle-logo {
+        .middle-logo, span {
             display: none;
         }
     }
 
+    li {
+        display: inline-block;
+
+        @include breakpoint(mediumDevice) {
+            width: 100%;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            min-width: 120px;
+            padding: 0 35px;
+            transition: .2s ease-in-out;
+
+            &:hover{
+                color: $turquoise;
+            }
+
+            @include breakpoint(largeDevice) {
+                min-width: 100px;
+            }
+        }
+    }
+}
+
+.navbar .navbar-toggler {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    //Toggler
     .navbar ul.open {
         max-height: 100vh;
-    }
-
-    .navbar ul li {
-        width: 100%;
-        /* border-bottom: 1px solid rgba(255,255,255,0.3); */
     }
 
     .navbar .navbar-toggler {

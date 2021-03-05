@@ -6,6 +6,10 @@
         text-align: center;
         line-height: 3;
 
+        @include breakpoint(smallDevice) {
+            padding: 50px 0 50px;
+        }
+
         p {
             font-style: italic;
             color: $grey;
@@ -27,7 +31,7 @@
         max-width: 100%;
 
         input {
-            width: 405px;
+            width: 400px;
             max-width: 100%;
             height: 65px;
             border: 1px solid #929292;
@@ -47,38 +51,38 @@
         width: 100%;
         padding: 0 25px;
     }
+}
 
-    //Button container
+//Button container
 
-    .wrapper-for-btn {
+.wrapper-for-btn {
+    max-width: 100%;
+
+    button {
+        color: $white;
+        background-color: $turquoise;
+        font-size: 18px;
+        width: 130px;
         max-width: 100%;
+        height: 65px;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+        @extend %flex-align-helper;
+        margin-left: 2px;
+        cursor: pointer;
+        transition: .2s;
 
-        button {
-            color: $white;
-            background-color: $turquoise;
-            font-size: 18px;
-            width: 130px;
-            max-width: 100%;
-            height: 65px;
-            text-transform: uppercase;
-            border: none;
-            outline: none;
-            @extend %flex-align-helper;
-            margin-left: 2px;
-            cursor: pointer;
-            transition: .2s;
+        &:hover {
+            background-color: $white;
+            color: $turquoise;
+            border: 1px solid $grey;
+        }
 
-            &:hover {
-                background-color: $white;
-                color: $turquoise;
-                border: 1px solid $grey;
-            }
-
-            @include breakpoint(smallDevice) {
-                margin-top: 5px;
-                width: 405px;
-                margin-left: 0;
-            }
+        @include breakpoint(smallDevice) {
+            margin-top: 5px;
+            width: 405px;
+            margin-left: 0;
         }
     }
 }

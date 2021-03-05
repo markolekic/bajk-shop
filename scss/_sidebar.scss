@@ -1,6 +1,11 @@
 #main-content {
+
     background-color: $light-grey;
     padding-bottom: 50px;
+
+    @include breakpoint(smallDevice) {
+        padding-bottom: 25px;
+    }
 
     p {
         color: $grey;
@@ -18,7 +23,7 @@
         }
 
         .text-accordion-wrapper {
-            width: 28%;
+            width: 23%;
             max-width: 100%;
 
             @include breakpoint(desktop) {
@@ -46,6 +51,7 @@
 
             @include breakpoint(smallDevice) {
                 width: 100%;
+                margin-bottom: 20px;
 
                 .about-side-img {
                     display: none;
@@ -64,7 +70,7 @@
 
     //Plain text section 
     .main-article {
-        width: 67%;
+        width: 74%;
         color: $grey;
         max-width: 100%;
 
@@ -120,6 +126,7 @@
 #accordion-section {
     background-color: $white;
     margin-top: 20px;
+    max-width: 100%;
 
     @include breakpoint(desktop) {
         width: 48%;
@@ -127,8 +134,8 @@
     }
 
     @include breakpoint(smallDevice) {
-        width: 100%;
-        margin-top: 20px;
+        width: 90%;
+        margin: 0 auto;
     }
 
     p {
