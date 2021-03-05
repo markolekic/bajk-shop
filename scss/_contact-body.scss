@@ -18,7 +18,7 @@
             flex-direction: column;
         }
 
-        .text-accordion-wrapper {
+        .text-sidebar-wrapper {
             width: 23%;
             max-width: 100%;
 
@@ -52,6 +52,7 @@
 
                     h1 {
                         padding-top: 0;
+                        text-transform: none;
                     }
 
                     p {
@@ -97,7 +98,7 @@
     }
 
     //Main article text section 
-    .main-article {
+    .main-content {
         width: 74%;
         color: $grey;
         max-width: 100%;
@@ -145,23 +146,24 @@
         .form-group {
             padding-bottom: 15px;
 
+            textarea,
             input,
             select {
+                padding: 15px 0 0 15px;
+                width: 100%;
                 margin-top: 5px;
-                width: 400px;
-                height: 50px;
                 color: $input-color;
                 border: 1px solid $input-color;
                 outline: none;
                 max-width: 100%;
-                padding-left: 15px;
                 font-style: italic;
+            }
 
-                &.msg-input {
-                    width: 100%;
-                    padding-bottom: 260px;
-                    padding-top: 20px;
-                }
+            input,
+            select {
+                width: 400px;
+                height: 50px;
+                padding: 0 0 0 15px;
 
                 @include breakpoint(mediumDevice) {
                     width: 100%;
@@ -171,6 +173,9 @@
             select {
                 font-style: normal;
                 color: $dark-grey;
+                appearance: none;
+                background: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.127L12 18.127L20 10.127H4Z" fill="%2364C29E"/></svg>') $white no-repeat 97%;
+
             }
 
             label[for=checkbox] {
