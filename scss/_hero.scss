@@ -3,7 +3,8 @@
     background-size: cover;
 
     &-work,
-    &-about {
+    &-about,
+    &-contact {
         height: 50vh;
         position: relative;
 
@@ -47,4 +48,10 @@
 .hero-work {
     background-image: url("/img/Layer 30@1X.png");
     background-position: center 20%;
+}
+
+//contact.html hero {
+.hero-contact {
+    background-image: url("/img/Layer 31@1X (1).png");
+    background-position: center 8%;
 }
