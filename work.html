@@ -34,22 +34,23 @@
     </header>
     <!--end of header-->
     <!---hero section-->
-    <section class="hero work-hero">
+    <section class="hero hero-work">
         <h1>Work</h1>
     </section>
     <!--tiles images section-->
     <main class="whole-work-section">
         <div class="work-container">
             <section id="tiles-images">
-                <div class="home-about-text">
-                    <span>Home </span><span> / Work</span>
-                </div>
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">Home</a></li>
+                    <li>About us</li>
+                </ul>
                     <div class="two-images-container">
-                        <div class="first-bike-image">
+                        <div class="box-bike-image">
                             <img src="img/Layer 28@1X.png" alt="">
                             <h2>Pellentesque id massa sit amet lectus varius faucibus sit amet</h2>
                         </div>
-                        <div class="second-bike-image">
+                        <div class="box-bike-image">
                             <img src="img/Layer 27@1X.png" alt="">
                             <h2>Maecenas mi justo, euismod ac massa vel copy</h2>
                         </div>
@@ -72,9 +73,9 @@
             </section>
             <!--end of text block section-->
             <!--Start of caurosel-->
-            <main class="main">
+            <section id="slider-section-work">
                 <div class="container">
-                    <div class="swiper-container">
+                    <div class="work-slider swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="card-image">
@@ -96,7 +97,7 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-            </main>
+            </section>
         </div>
     </main>
     
@@ -146,6 +147,7 @@
 
     <!--swiper add-->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/work.js"></script>
 </body>
 
