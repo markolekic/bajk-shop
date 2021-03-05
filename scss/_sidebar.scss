@@ -82,7 +82,7 @@
             &:hover {
                 text-decoration: underline;
             }
-         }
+        }
 
         h1 {
             text-transform: uppercase;
@@ -175,15 +175,17 @@
     }
 }
 
-.home-about-text {
+.breadcrumbs {
+    display: flex;
 
-    span {
+    a {
         color: $turquoise;
-        cursor: pointer;
+    }
 
-        &:last-child {
-            color: $grey;
-        }
+    li:not(:last-child)::after {
+        content: "/";
+        display: inline-block;
+        margin: 0 5px;
     }
 
     @extend %container-centered;
