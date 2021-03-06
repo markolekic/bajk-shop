@@ -1,0 +1,25 @@
+{
+  "name": "bike-shop",
+  "version": "1.0.0",
+  "description": "practice",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markolekic/bajk-shop.git"
+  },
+  "keywords": [
+    "practicing",
+    "html",
+    "scss",
+    "js"
+  ],
+  "author": "Marko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markolekic/bajk-shop/issues"
+  },
+  "homepage": "https://github.com/markolekic/bajk-shop#readme"
+}
