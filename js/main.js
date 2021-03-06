@@ -13,6 +13,7 @@ navbarToggler.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
   //finding offset
   let offset = hero.offsetTop + hero.offsetHeight;
+  console.log(offset);
   //on scroll add white color
   if (window.scrollY > offset) {
     navbar.classList.add('white-header');
