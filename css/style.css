@@ -182,7 +182,7 @@
       color: #FFF; }
 
 .hero-index {
-  background-image: url("/img/Layer 7@1X.png");
+  background-image: url("../img/Layer 7@1X.png");
   background-position: center;
   height: 100vh; }
   @media screen and (max-width: 992px) {
@@ -194,15 +194,15 @@
       height: 50vh; } }
 
 .hero-about {
-  background-image: url("/img/Layer 27@1X.png");
+  background-image: url("../img/Layer 27@1X.png");
   background-position: center 8%; }
 
 .hero-work {
-  background-image: url("/img/Layer 30@1X.png");
+  background-image: url("../img/Layer 30@1X.png");
   background-position: center 20%; }
 
 .hero-contact {
-  background-image: url("/img/Layer 31@1X (1).png");
+  background-image: url("../img/Layer 31@1X (1).png");
   background-position: center 8%; }
 
 #text-block {
