@@ -11,7 +11,7 @@
     z-index: 999;
     transition: .3s ease-in-out;
 
-    @include breakpoint(smallDevice) {
+    @include breakpoint(mediumDevice) {
         height: 115px;
     }
 }
