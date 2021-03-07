@@ -6,7 +6,7 @@ accordionBtns.forEach((accordion) => {
   accordion.addEventListener('click', (e) => {
     //Use the classlist dom method in combination with the toggle method
     e.target.classList.toggle("is-open");
-    //call colapse all class
+    //call colapseaa function
     collapseAll(e.target)
     //it allows us to work with the div that has the content that we want to display
     let content = e.target.nextElementSibling;
