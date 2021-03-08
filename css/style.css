@@ -64,6 +64,9 @@
       top: 10px;
       left: 0; } }
 
+.navbar a.active {
+  color: #64C29E; }
+
 .navbar a {
   color: #353738;
   text-transform: uppercase;

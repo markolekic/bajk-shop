@@ -35,7 +35,10 @@
         top: 10px;
         left: 0;
     }
-
+}
+//active color on navbar links
+.navbar a.active {
+    color: $turquoise;
 }
 
 .navbar a {
