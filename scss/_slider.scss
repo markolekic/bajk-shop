@@ -86,6 +86,9 @@
             background: $white;
         }
     }
+    @include breakpoint(mediumDevice) {
+        display: none;
+    }
 }
 
 .swiper-slide-prev, .swiper-slide-next {

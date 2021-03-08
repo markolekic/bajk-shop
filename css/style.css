@@ -477,6 +477,10 @@
     background: #FFF; }
 
 @media screen and (max-width: 768px) {
+  .swiper-pagination {
+    display: none; } }
+
+@media screen and (max-width: 768px) {
   .swiper-slide-prev, .swiper-slide-next {
     margin: 0 5px;
     margin-top: 10px; } }
