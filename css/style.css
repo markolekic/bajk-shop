@@ -606,15 +606,15 @@
     .input-btn-container .wrapper-for-input input::-moz-placeholder {
       font-style: italic;
       font-style: 15px;
-      color: #929292; }
+      color: #D3D7D9; }
     .input-btn-container .wrapper-for-input input:-ms-input-placeholder {
       font-style: italic;
       font-style: 15px;
-      color: #929292; }
+      color: #D3D7D9; }
     .input-btn-container .wrapper-for-input input::placeholder {
       font-style: italic;
       font-style: 15px;
-      color: #929292; }
+      color: #D3D7D9; }
   @media screen and (max-width: 576px) {
     .input-btn-container {
       flex-direction: column;
